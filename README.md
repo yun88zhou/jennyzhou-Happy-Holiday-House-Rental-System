@@ -2,9 +2,8 @@
 
 A web application for managing holiday house rentals, built with Python Flask and MySQL.
 
- 
 
-![Holiday House Rental System Homepage](https://github.com/liyunzhou1156273/1156273_assignment1_639/blob/main/static/bground/holidayhomepage.jpg)
+![Holiday House Rental System Homepage](https://github.com/yun88zhou/jennyzhou-Happy-Holiday-House-Rental-System/blob/main/static/bground/holidayhomepage.jpg)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -49,18 +48,17 @@ This Flask-based web application provides a simplified Holiday House Rental Syst
 │   ├── 📁css/
 │   └── 📁houseImage/
 └── 📁templates/
-├── 📁common/
-├── 📁customer/
-├── 📁staff/
-├── 📁admin/
-├── base_customer.html
-├── base_staff.html
-└── base_admin.html
+    ├── 📁common/
+    ├── 📁customer/
+    ├── 📁staff/
+    ├── 📁admin/
+    ├── base_customer.html
+    ├── base_staff.html
+    └── base_admin.html
+
 
 
 ## User Roles and Functionalities
-
-![Application Structure](https://github.com/liyunzhou1156273/1156273_assignment1_639/blob/main/static/bground/structure.png)
 
 The application supports three user roles:
 1. **Customer**: Browse houses, view details, manage profile
@@ -70,22 +68,28 @@ The application supports three user roles:
 ## Installation and Local Setup
 
 1. Clone the repository
+
+```git clone https://github.com/yun88zhou/jennyzhou-Happy-Holiday-House-Rental-System```
+
 2. Install required packages:
-```pip install Flask Flask-MySQLdb bcrypt
+```pip install Flask Flask-MySQLdb bcrypt```
 
 3. Configure database connection in `connect.py`:
 ```python
+
 HOST = "your_database_host"
 USER = "your_database_user"
 PASSWORD = "your_database_password"
-DB = "your_database_name"
+DB = "your_database_name"```
 
 4.Run the application
-```python app.py
+```python app.py```
 
 5.Access the application at http://localhost:5000
 
+
 ## Usage Guide
+
 For detailed instructions on how to use the system, please refer to our User Guide.
 
 ## Test Users

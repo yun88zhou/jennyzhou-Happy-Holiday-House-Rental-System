@@ -1,0 +1,61 @@
+{% extends "base_customer.html" %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+  <div class="col-10">  </div>
+      <div class="col-2"><a href="{{url_for('logout')}}" class="btn btn-secondary btn-lg btn-sm">Logout</a></div>
+  </div>
+</div>
+<br><br>
+
+
+<div style="margin-top:10px;margin-bottom:10px;margin-left:200px;;margin-right:10px;">
+  <nav aria-label="Account">
+      <ol class="_1ckj08w">
+          <li class="_36rlri">
+              <span class="_lnlh4ma">
+                  <a href="/customer_dashboard" class="_sgg9wmi" aria-busy="false">
+                      Home
+                  </a>
+              </span>
+          </li>
+          <li class="_36rlri">
+              <div class="_36rlri" style="margin-left:16px;margin-right:16px">
+                  <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="height:10px;width:10px;fill:#767676">
+                      <path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd">
+                      </path>
+                  </svg>
+              </div>
+              <span aria-current="step" class="_lnlh4ma">
+                  Account
+              </span>
+          </li>
+      </ol>
+  </nav>
+</div>
+
+
+
+
+
+
+<div class="container2" style="margin-top:10px;margin-bottom:10px;margin-left:260px;;margin-right:10px;">
+    <div class="row">
+ 
+        <div  class="accountName">
+          {{user.username}}, you may update your profile. 
+        </div> 
+        <div class="container3">
+            <div class="box"><a href="{{url_for('customerProfile')}}">Personal Info</a></div>
+            <div class="box"><a href="{{url_for('password_change',user_id=user.user_id)}}">Change Password</a></div>
+        </div>
+    </div>
+</div>
+
+<!-- clicking one of two boxes will direct user to relative url to update info -->
+
+<!-- check css/customer_account.css for this page's css codes -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/customer_account.css') }}">
+
+{% endblock %}

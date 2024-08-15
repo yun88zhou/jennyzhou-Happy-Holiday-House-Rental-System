@@ -75,11 +75,11 @@ The application supports three user roles:
 ```pip install Flask Flask-MySQLdb bcrypt```
 
 3. Configure database connection in `connect.py`:
-```python```
-```HOST = "your_database_host"
+
+HOST = "your_database_host"
 USER = "your_database_user"
 PASSWORD = "your_database_password"
-DB = "your_database_name"```
+DB = "holidayhouse"
 
 4.Run the application
 ```python app.py```

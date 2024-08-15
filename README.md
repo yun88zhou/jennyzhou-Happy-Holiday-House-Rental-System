@@ -69,16 +69,14 @@ The application supports three user roles:
 
 ## Installation and Local Setup
 
-1. Clone the repository
-
-```git clone https://github.com/yun88zhou/jennyzhou-Happy-Holiday-House-Rental-System```
+1. Clone the repository: ```git clone https://github.com/yun88zhou/jennyzhou-Happy-Holiday-House-Rental-System```
 
 2. Install required packages:
 ```pip install Flask Flask-MySQLdb bcrypt```
 
 3. Configure database connection in `connect.py`:
 ```python```
-HOST = "your_database_host"
+```HOST = "your_database_host"
 USER = "your_database_user"
 PASSWORD = "your_database_password"
 DB = "your_database_name"```
@@ -102,16 +100,16 @@ For detailed instructions on how to use the system, please refer to our User Gui
 
 ## Future Enhancements
 
-Implement booking and rental functionalities
-Add payment integration
-Enhance search and filtering options for houses
-Implement a review and rating system
+- Implement booking and rental functionalities
+- Add payment integration
+- Enhance search and filtering options for houses
+- Implement a review and rating system
 
 ## Resources
 
-House images sourced from Airbnb
-Flask Documentation
-MySQL Documentation
+- House images sourced from Airbnb
+- Flask Documentation
+- MySQL Documentation
 
 
 

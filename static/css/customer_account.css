@@ -1,0 +1,174 @@
+
+.container1 {
+    display: flex;
+    font-size: 40px;
+    font-family: 'system-ui', sans-serif;
+    font-weight: bold;
+    color: #484848 ;
+}
+
+.container2 {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'system-ui', sans-serif;
+    font-weight: bold;
+    color: #585858 ;
+}
+
+
+.container3 {
+    display: flex !important;
+ 
+    
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 183, 186);
+    margin:0 10px;
+    font-family: 'system-ui', sans-serif;
+    font-size: 28px;
+    color: rgb(61, 64, 77);
+    min-width: 300px;
+    width: 20% !important;
+    height: 200px;
+    border: 1px solid #333;
+}
+
+.accountName{
+    margin-top: 20px;
+    margin-bottom: 25px;  
+    margin-left:10px;
+}
+
+
+.personalInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 50vw;
+    margin-right: 5vw;
+    margin-top: 10px;
+    margin-bottom: 15px;  
+    margin-left:200px;
+}
+.ViewpersonalInfo,
+.EditpersonalInfo {
+    flex: 1;
+    flex-basis: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    background-color: transparent;
+    font-family: 'system-ui', sans-serif;
+    font-size: 15px;
+    color: rgb(61, 64, 77);
+    margin-bottom: 2%;
+    overflow-y: auto;
+    
+}
+.ViewpersonalInfo {
+    align-self: flex-start;
+}
+.EditpersonalInfo {
+    align-self: flex-end;
+}
+
+
+.container4 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 20px;
+    font-family: 'system-ui', sans-serif;
+    font-weight: bold;
+    color: rgb(6, 7, 9);
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+
+._1ckj08w {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+._36rlri {
+    display: inline-block !important;
+}
+
+
+._1ckj08w {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+
+._lnlh4ma {
+    margin: 0px !important;
+    word-wrap: break-word !important;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2857142857142858em !important;
+    color: #484848 !important;
+}
+ 
+
+ 
+
+ 
+
+
+
+
+.detailsH {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+.house-details {
+    max-width: 800px;
+    margin: 20px auto;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.House-Image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+ 
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ebf0f3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+

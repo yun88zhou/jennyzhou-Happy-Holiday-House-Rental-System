@@ -1,0 +1,22 @@
+.dashboard {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    margin-left: 180px; 
+    margin-top: 0; 
+    background-image: url('/static/bground/bg.jpg');
+    background-size: 500% !important;
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+    width: 90% ;  
+    height: 500% !important;  
+    overflow-y: auto;
+}
+
+.header{
+    margin-left:50px;
+    margin-top: 0; 
+
+
+}

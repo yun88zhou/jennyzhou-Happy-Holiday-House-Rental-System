@@ -1,0 +1,51 @@
+{% extends "base_staff.html" %}
+{% block content %}
+
+
+<div class="dashboard">
+
+    <table class="table">
+
+        <thead><h4>Your Profile</h4></thead>
+        <tbody>
+          <tr>
+            <th scope="row">Username:</th>
+            <td>{{user.username}}</td>
+          </tr>
+          <tr>
+            <th scope="row">First Name: </th>
+            <td>{{staff.s_fName}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Last Name: </th>
+            <td>{{staff.s_Lname}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Email Address: </th>
+            <td>{{staff.email}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Phone Number: </th>
+            <td>{{staff.phone_number}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Date Joined: </th>
+            <td>{{staff.date_joined}} </td>
+          </tr>
+          <br>
+          <tr>
+            <th scope="row"><a href="{{ url_for('staff_editProfile') }}" class="btn btn-outline-primary">Edit Profile</a></th>
+            <td><a href="{{ url_for('staff_password') }}" class="btn btn-outline-primary">Change Password</a> </td> 
+        </tr>
+        </tbody>
+    </table>
+   
+ 
+ 
+
+ 
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_account.css') }}">
+
+{% endblock %}

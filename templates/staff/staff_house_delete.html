@@ -1,0 +1,64 @@
+{% extends "base_staff.html" %}
+{% block content %}
+
+
+
+
+<form action="{{ url_for('staff_deleteHouse') }}" method="POST" class="col-md-6 mx-auto">
+   
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                <a href="{{ url_for('staff_listHouse') }}" class="btn btn-success">Back</a>
+            </div>
+          <div class="form-group col-md-12">
+              <div  class="form-label">House ID: {{house.house_id}}</div>
+            </div>
+          <div class="form-group col-md-12">
+            <div  class="form-label">House Address: {{house.h_address}}</div>
+          </div>
+          <br>
+          <div class="form-group col-md-12">
+              <div  class="form-label">Bedrooms: {{house.bedroom_num}}</div>
+               
+          </div>
+          <br>
+          <div class="form-group col-md-12">
+              <div  class="form-label">Bathrooms: {{house.bathroom_num}}</div>
+     
+          </div>
+          <br>
+          <div class="form-group col-md-12">
+              <div  class="form-label">Maximum Occupancy: {{house.max_occupancy}}</div>
+         
+          </div>
+          <br>
+          <div class="form-group col-md-12">
+              <div  class="form-label">Rental Per Night: {{house.rental_per_night}}</div>
+          </div>
+          <br>
+          <div class="form-group col-md-12">
+              <div  class="form-label">House Image: {{house.house_image}}</div>
+          </div>
+          <br>
+          <div class="form-group col-md-12">
+              <div  class="form-label">House Title: {{house.house_title}}</div>
+          </div>
+          <br>
+          <div class="form-group col-md-12">
+              <div  class="form-label">House Description: {{house.house_description}}</div>
+          </div>
+          <br>
+          <div class="col-12">
+            <input type="hidden" class="form-control" id="house_id" value="{{ house.house_id }}" name="house_id" > 
+            <button class="btn btn-primary" type="submit" aria-label="submit button">Delete</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</form>
+ 
+
+{% endblock %}

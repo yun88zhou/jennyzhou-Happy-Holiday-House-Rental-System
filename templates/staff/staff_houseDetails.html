@@ -1,0 +1,25 @@
+{% extends "base_staff.html" %}
+{% block content %}
+
+
+
+<div class="dashboard">
+    <div class="btn btn-light">
+        <a href="{{ url_for('staff_dashboard')}}" >Back</a>
+    </div>
+    <div class="detailsH">
+        <div class="house-details">
+            <img src="{{ url_for('static', filename='houseImage/' + houses['house_image']) }}" class="House-Image" alt="House Image">
+            <h2 >{{ houses.house_title}}</h2>
+            <p><strong>Location:</strong>{{houses.h_address}}</p>
+            <p><strong>Price:</strong> ${{houses.rental_per_night}} per night</p> 
+            <p><strong>Bedrooms:</strong> {{houses.bedroom_num}}</p>
+            <p><strong>Bathrooms:</strong>{{houses.bathroom_num}}</p>
+            <p><strong>Description:</strong>{{ houses.house_description}}</p>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_account.css') }}">
+
+
+{% endblock %}

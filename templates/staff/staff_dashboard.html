@@ -1,0 +1,46 @@
+{% extends "base_staff.html" %}
+{% block content %}
+
+
+<div class="dashboard">
+    <header>
+        <a href="{{ url_for('staff_dashboard') }}">
+            <img src="{{ url_for('static', filename='bground/HHHlogo.png') }}" alt="Logo">
+        </a>
+    </header>
+    <br>
+    <br>
+    <br>
+
+<!-- this is the heading on the top of images -->
+    <div class="row">
+      <h4>Find your home that suits your holiday</h4>
+    </div>
+
+  <!-- Images are displayed three in a row with simple caption below. -->
+    <div class="row">
+        {% for house in houses %}
+            <div class="col-sm-4">
+                <figure class="figure">  
+                   <!-- user click an image and it will direct user to the relative house and view more info -->
+                    <a href="{{ url_for('staff_houseDetails', house_id=house['house_id']) }}">  
+                        <img src="{{ url_for('static', filename='houseImage/' + house['house_image']) }}" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                    </a>
+                    <!-- This is the caption below every image -->
+                    <figcaption class="figure-caption">
+                        {{ house.h_address }}
+                        <br>
+                        Sleeps {{ house.max_occupancy }} | {{ house.bedroom_num }} bedrooms | {{ house.bathroom_num }} bathrooms   
+                    </figcaption>
+                </figure>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_account.css') }}">
+ 
+
+{% endblock %}
+
+

@@ -2,7 +2,7 @@
 
 A web application for managing holiday house rentals, built with Python Flask and MySQL.
 
-[Live Demo](https://liyunzhou1156273.pythonanywhere.com/)
+ 
 
 ![Holiday House Rental System Homepage](https://github.com/liyunzhou1156273/1156273_assignment1_639/blob/main/static/bground/holidayhomepage.jpg)
 

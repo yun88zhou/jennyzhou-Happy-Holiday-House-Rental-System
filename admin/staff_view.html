@@ -1,0 +1,77 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+<div class="dashboard">
+    <br>
+    <h2>Search Staff</h2>
+    <br>
+    <form id="search-staff" class="row g-3" action="{{ url_for('admin_searchStaff') }}" method="POST">
+      <div class="col-md-5">
+        <input id="staffname" name="staffname" class="form-control" type="text" placeholder="Search By Name"
+          value="{{staffname}}">
+      </div>
+      <div class="col-1">
+        <button class="btn btn-primary" type="submit" aria-label="submit button" name="search" value="Filter">Search</button>
+      </div>
+      <div class="col-1">
+        <button class="btn btn-danger" type="submit" aria-label="reset button" name="reset"   
+          id="reset">Reset</button>
+      </div>
+    </form>
+    <br>
+    <br>
+  
+  <!-- add staff button -->
+      <a href="{{ url_for('admin_addStaff') }}" class="btn btn-primary">Add  Staff </a>
+  <br>
+  <br>
+  <h5>Your Search Result</h5>
+        {% if staff_list|length==0   %}
+
+        <div style="text-align:center">
+          <img src="{{ url_for('static', filename='bground/no-results.png') }}" alt="no results" width="150px" height="150px">
+          <br><br><br>
+          <h3>No Results</h3>
+          <p>Try using another name to broaden your search</p>
+        </div>
+        {% else %}
+        <table class="table table-striped table-hover table-fit">
+          <thead>
+            <tr>
+               <td>Staff ID</td>
+               <td>Employee ID</td>
+               <td>User ID</td>
+               <td>First Name</td>
+               <td>Last Name</td>
+               <td>Email</td>
+               <td>Phone Number</td>
+               <td>Date Joined</td>
+               <td> </td>
+               <td> </td>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in staff_list %}
+                <tr>
+                    {% for item in row %}
+                        <td>{{ item }}</td>
+                    {% endfor %}
+                    <td>   
+                        <button class="btn btn-sm btn-outline-primary" type="submit" aria-label="edit button" name="edit"   
+                        id="edit"><a href="{{ url_for('admin_editStaff', staff_id=row[0]) }}">  Edit  </a></button>
+                    </td>
+                    
+                    <td>   
+                      <button class="btn btn-sm btn-outline-danger" type="submit" aria-label="delete button" name="delete"   
+                      id="delete"><a href="{{ url_for('admin_deleteStaff', staff_id=row[0]) }}">  Delete  </a></button>
+                  </td>
+                </tr>
+                 {% endfor %}
+        </tbody>
+        </table>
+        {% endif %}
+  </div>
+      
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin_account.css') }}">
+
+{% endblock %}

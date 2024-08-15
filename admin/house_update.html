@@ -1,0 +1,61 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+
+
+
+<form action="{{ url_for('admin_editHouse')}}" method="POST" class="col-md-6 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+                <a href="{{ url_for('admin_listHouse') }}" class="btn btn-success">Back</a>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="h_address" class="form-label">House Address: </label>
+              <input type="text" class="form-control" id="h_address" value="{{ house.h_address }}" name="h_address" placeholder="House Address" >
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <label for="bedroom_num" class="form-label">Bedrooms: </label>
+                <input type="number" class="form-control"  min="0" max="50"  id="bedroom_num"  name="bedroom_num" value="{{ house.bedroom_num }}" placeholder="Number of Bedrooms" >
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+            <label for="bathroom_num" class="form-label">Bathrooms: </label>
+            <input type="number" class="form-control"  min="0" max="50"  id="bathroom_num" value="{{ house.bathroom_num }}" name="bathroom_num" placeholder="Number of Bathrooms" >
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <label for="max_occupancy" class="form-label">Maximum Occupancy: </label>
+                <input type="number" class="form-control"  min="0" max="120" id="max_occupancy" value="{{ house.max_occupancy }}" name="max_occupancy" placeholder="Maximum Occupancy">
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <label for="rental_per_night" class="form-label">Rental Per Night: </label>
+                <input type="text" class="form-control" id="rental_per_night" value="{{ house.rental_per_night }}" name="rental_per_night" placeholder="Rental Per Night">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="house_image" class="form-label">House Image: </label>
+                <input type="text" class="form-control" id="house_image" value="{{ house.house_image }}" name="house_image" placeholder="House Image">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="house_title" class="form-label">House Title: </label>
+                <input type="text" class="form-control" id="house_title" value="{{ house.house_title }}" name="house_title" placeholder="House Title">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="address" class="form-label">House Description: </label>
+                <input type="text" class="form-control" id="house_description" value="{{ house.house_description }}" name="house_description" placeholder="House Description">
+            </div>
+            <br>
+            <div class="col-12">
+              <input  value="{{house.house_id}}"  type="hidden" id="house_id" name="house_id" >
+              <button class="btn btn-primary" type="submit" aria-label="submit button">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</form>
+
+
+{% endblock %}

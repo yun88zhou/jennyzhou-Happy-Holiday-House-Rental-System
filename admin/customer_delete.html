@@ -1,0 +1,52 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+
+
+
+<form action="{{ url_for('admin_deleteCustomer') }}" method="POST" class="col-md-6 mx-auto">
+   
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+                <a href="{{ url_for('admin_listCustomer') }}" class="btn btn-success">Back</a>
+              </div>
+            <div class="form-group col-md-12">
+                <div  class="form-label">Customer ID: {{customer.customer_id}}</div>
+              </div>
+            <div class="form-group col-md-12">
+              <div  class="form-label">First Name: {{customer.c_fName}}</div>
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <div  class="form-label">Last Name: {{customer.c_Lname}}</div>
+                 
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <div  class="form-label">Email: {{customer.email}}</div>
+       
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <div  class="form-label">Phone Number: {{customer.phone_num}}</div>
+           
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <div  class="form-label">Address: {{customer.address}}</div>
+            </div>
+
+            <br>
+            <div class="col-12">
+              <input type="hidden" class="form-control" id="customer_id" value="{{ customer.customer_id }}" name="customer_id" > 
+              <button class="btn btn-primary" type="submit" aria-label="submit button">Delete</button>
+            </div>
+ 
+          </div>
+        </div>
+      </div>
+</form>
+  
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base_admin.html" %}
+{% block content %}
+
+
+
+
+<form action="{{ url_for('admin_editStaff')}}" method="POST" class="col-md-6 mx-auto">
+
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+                <a href="{{ url_for('admin_listStaff') }}" class="btn btn-success">Back</a>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="s_fName" class="form-label">First Name: </label>
+              <input type="text" class="form-control" id="s_fName" value="{{ staff.s_fName }}" name="s_fName" placeholder="First Name" >
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <label for="s_Lname" class="form-label">Last Name: </label>
+                <input type="text" class="form-control" max=45 id="s_Lname"  name="s_Lname" value="{{ staff.s_Lname }}"  >
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+            <label for="email" class="form-label">Email: </label>
+            <input type="email" class="form-control" id="Email" value="{{ staff.email }}" name="Email" placeholder="Email" disabled>
+            <input type="hidden" class="form-control" id="email" value="{{ staff.email }}" name="email" >
+            </div>
+            <br>
+            <div class="form-group col-md-12">
+                <label for="phone" class="form-label">Phone Number: </label>
+                <input type="tel" class="form-control" id="phone" value="{{ staff.phone_number }}" name="phone" placeholder="Phone Number">
+            </div>            
+            <div class="form-group col-md-12">
+                <label for="date_joined" class="form-label">Date Joined (mm/dd/yy): </label>
+                <div class="input-group date">
+                    <input type="date" class="form-control" value="{{ staff.date_joined }}" id="date_joined" name="date_joined" placeholder="mm/dd/yy">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-12">
+              <input  value="{{staff.staff_id}}"  type="hidden" id="staff_id" name="staff_id" > <br>
+              <button class="btn btn-primary" type="submit" aria-label="submit button">Update</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+</form>
+  
+{% endblock %}

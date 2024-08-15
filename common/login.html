@@ -1,0 +1,24 @@
+{% extends "base_customer.html" %}
+{% block content %}
+
+<div class="container">
+	<h2>User Login</h2>
+	<form action="{{ url_for('login') }}" method="post" class="col-md-6">
+	    {% if message is defined and message %}
+			<div class="alert alert-warning">{{ message }}</div>
+		{% endif %}
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="Enter email" name="email">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Password:</label>
+			<input type="password" class="form-control" id="password" name="password" placeholder="Enter password" name="pswd">
+		</div>    
+		<button type="submit" class="btn btn-primary">Login</button>
+		<p class="bottom">Dont't have an account?  <a class="bottom" href="{{url_for('register')}}"> Register here</a></p>
+	</form>
+</div>
+
+
+{% endblock %}

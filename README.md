@@ -39,6 +39,7 @@ This Flask-based web application provides a simplified Holiday House Rental Syst
 - Password Hashing: bcrypt
 
 ## Application Structure
+```
 📁app
 ├── app.py
 ├── connect.py
@@ -55,6 +56,7 @@ This Flask-based web application provides a simplified Holiday House Rental Syst
     ├── base_customer.html
     ├── base_staff.html
     └── base_admin.html
+```
 
 
 
@@ -75,8 +77,7 @@ The application supports three user roles:
 ```pip install Flask Flask-MySQLdb bcrypt```
 
 3. Configure database connection in `connect.py`:
-```python
-
+```python```
 HOST = "your_database_host"
 USER = "your_database_user"
 PASSWORD = "your_database_password"
